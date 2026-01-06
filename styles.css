@@ -1,0 +1,119 @@
+* { box-sizing: border-box; }
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #0f172a;
+    color: #e5e7eb;
+}
+
+.app {
+    max-width: 500px;
+    margin: 40px auto;
+    background: #020617;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+h1, h2 {
+    text-align: center;
+}
+
+form {
+    display: flex;
+    gap: 6px;
+    margin-bottom: 16px;
+}
+
+input, select, button {
+    padding: 8px;
+    border-radius: 6px;
+    border: none;
+}
+
+input, select {
+    flex: 1;
+    background: #020617;
+    color: #e5e7eb;
+    border: 1px solid #334155;
+}
+
+button {
+    background: #22c55e;
+    color: #020617;
+    cursor: pointer;
+}
+
+.calendar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.days {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 6px;
+    margin: 10px 0;
+}
+
+.day {
+    padding: 10px;
+    background: #020617;
+    border: 1px solid #334155;
+    border-radius: 6px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.day.active {
+    background: #22c55e;
+    color: #020617;
+}
+
+.dashboard {
+    display: grid;
+    gap: 12px;
+    margin: 20px 0;
+}
+
+.card {
+    background: #020617;
+    border: 1px solid #334155;
+    padding: 12px;
+    border-radius: 8px;
+}
+
+.progress-bar {
+    height: 10px;
+    background: #020617;
+    border: 1px solid #334155;
+    border-radius: 6px;
+    overflow: hidden;
+}
+
+#progressFill {
+    height: 100%;
+    width: 0%;
+    background: #22c55e;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+li {
+    background: #020617;
+    border: 1px solid #334155;
+    padding: 10px;
+    margin-bottom: 6px;
+    border-radius: 6px;
+    display: flex;
+    justify-content: space-between;
+}
+
+li.done {
+    text-decoration: line-through;
+    opacity: 0.6;
+}

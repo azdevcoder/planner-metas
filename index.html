@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Planner de Hábitos</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div class="app">
+    <h1>📅 Planner de Hábitos</h1>
+
+    <!-- FORM HABITO -->
+    <form id="habitForm">
+        <input type="text" id="habitName" placeholder="Novo hábito" required>
+        <select id="habitCategory">
+            <option>Saúde</option>
+            <option>Estudo</option>
+            <option>Trabalho</option>
+            <option>Pessoal</option>
+        </select>
+        <button type="submit">Adicionar</button>
+    </form>
+
+    <!-- CALENDÁRIO -->
+    <div class="calendar">
+        <button id="prevMonth">◀</button>
+        <h2 id="monthYear"></h2>
+        <button id="nextMonth">▶</button>
+    </div>
+
+    <div class="days" id="calendarDays"></div>
+
+    <!-- DASHBOARD -->
+    <div class="dashboard">
+        <div class="card">
+            <h4>Progresso do Mês</h4>
+            <div class="progress-bar">
+                <div id="progressFill"></div>
+            </div>
+            <p id="progressText">0%</p>
+        </div>
+
+        <div class="card">
+            <h4>Concluídos</h4>
+            <p id="doneCount">0 / 0</p>
+        </div>
+
+        <div class="card">
+            <h4>Por Categoria</h4>
+            <ul id="categoryStats"></ul>
+        </div>
+    </div>
+
+    <!-- LISTA -->
+    <h3 id="selectedDate"></h3>
+    <ul id="habitList"></ul>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
